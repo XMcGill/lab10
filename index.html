@@ -43,7 +43,7 @@
     }
     #features {
       top: 0;
-      height: 100px;
+      height: 125px;
       margin-top: 20px;
       width: 250px;
     }
@@ -109,12 +109,12 @@
     // change info window on hover
     map.on('mousemove', function(e) {
         var states = map.queryRenderedFeatures(e.point, {
-        layers: ['buildings-lu-new'] // get from the mapbox top left layer information
+        layers: ['buildings-lu'] // get from the mapbox top left layer information
         });
           
         if (states.length > 0) {
         document.getElementById('pd').innerHTML =
-            '<h3><strong> building id:' +
+            '<h3><strong>Building ID:' +
             // states[0].properties.fid +
             '</strong></h3><p><strong><em>' +
             states[0].properties.landuse;
